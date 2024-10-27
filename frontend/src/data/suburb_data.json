@@ -1,0 +1,2452 @@
+[
+    {
+        "Suburb": "Abbotsford",
+        "Propertycount": 4019,
+        "Distance": 2.7,
+        "Postcode": 3067,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Aberfeldie",
+        "Propertycount": 1543,
+        "Distance": 8.3,
+        "Postcode": 3040,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Airport West",
+        "Propertycount": 3464,
+        "Distance": 11.8,
+        "Postcode": 3042,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Albanvale",
+        "Propertycount": 1899,
+        "Distance": 14.0,
+        "Postcode": 3021,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Albert Park",
+        "Propertycount": 3280,
+        "Distance": 3.2,
+        "Postcode": 3206,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Albion",
+        "Propertycount": 2185,
+        "Distance": 12.1,
+        "Postcode": 3020,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Alphington",
+        "Propertycount": 2211,
+        "Distance": 6.1,
+        "Postcode": 3078,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Altona",
+        "Propertycount": 5301,
+        "Distance": 12.4,
+        "Postcode": 3018,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Altona Meadows",
+        "Propertycount": 7630,
+        "Distance": 15.5,
+        "Postcode": 3028,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Altona North",
+        "Propertycount": 5132,
+        "Distance": 10.4,
+        "Postcode": 3025,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Ardeer",
+        "Propertycount": 1281,
+        "Distance": 12.8,
+        "Postcode": 3022,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Armadale",
+        "Propertycount": 4836,
+        "Distance": 6.3,
+        "Postcode": 3143,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Ascot Vale",
+        "Propertycount": 6567,
+        "Distance": 5.1,
+        "Postcode": 3032,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Ashburton",
+        "Propertycount": 3052,
+        "Distance": 10.7,
+        "Postcode": 3147,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Ashwood",
+        "Propertycount": 2894,
+        "Distance": 11.4,
+        "Postcode": 3147,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Aspendale",
+        "Propertycount": 2824,
+        "Distance": 21.5,
+        "Postcode": 3195,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Aspendale Gardens",
+        "Propertycount": 2243,
+        "Distance": 21.5,
+        "Postcode": 3195,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Attwood",
+        "Propertycount": 1130,
+        "Distance": 16.5,
+        "Postcode": 3049,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Avondale Heights",
+        "Propertycount": 4502,
+        "Distance": 10.0,
+        "Postcode": 3034,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Avonsleigh",
+        "Propertycount": 335,
+        "Distance": 36.9,
+        "Postcode": 3782,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Bacchus Marsh",
+        "Propertycount": 2871,
+        "Distance": 37.5,
+        "Postcode": 3340,
+        "Regionname": "Western Victoria"
+    },
+    {
+        "Suburb": "Balaclava",
+        "Propertycount": 2952,
+        "Distance": 6.5,
+        "Postcode": 3183,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Balwyn",
+        "Propertycount": 5682,
+        "Distance": 8.9,
+        "Postcode": 3103,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Balwyn North",
+        "Propertycount": 7809,
+        "Distance": 9.4,
+        "Postcode": 3104,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Bayswater",
+        "Propertycount": 5030,
+        "Distance": 23.2,
+        "Postcode": 3153,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Bayswater North",
+        "Propertycount": 3598,
+        "Distance": 23.2,
+        "Postcode": 3153,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Beaconsfield",
+        "Propertycount": 2332,
+        "Distance": 39.0,
+        "Postcode": 3807,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Beaconsfield Upper",
+        "Propertycount": 973,
+        "Distance": 39.8,
+        "Postcode": 3808,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Beaumaris",
+        "Propertycount": 5366,
+        "Distance": 17.3,
+        "Postcode": 3193,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Belgrave",
+        "Propertycount": 1588,
+        "Distance": 30.4,
+        "Postcode": 3160,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Bellfield",
+        "Propertycount": 790,
+        "Distance": 9.2,
+        "Postcode": 3081,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Bentleigh",
+        "Propertycount": 6795,
+        "Distance": 12.3,
+        "Postcode": 3204,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Bentleigh East",
+        "Propertycount": 10969,
+        "Distance": 13.9,
+        "Postcode": 3165,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Berwick",
+        "Propertycount": 17093,
+        "Distance": 35.2,
+        "Postcode": 3806,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Black Rock",
+        "Propertycount": 2866,
+        "Distance": 17.3,
+        "Postcode": 3193,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Blackburn",
+        "Propertycount": 5713,
+        "Distance": 13.4,
+        "Postcode": 3130,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Blackburn North",
+        "Propertycount": 2867,
+        "Distance": 13.4,
+        "Postcode": 3130,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Blackburn South",
+        "Propertycount": 4387,
+        "Distance": 13.4,
+        "Postcode": 3130,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Bonbeach",
+        "Propertycount": 2887,
+        "Distance": 27.0,
+        "Postcode": 3196,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Boronia",
+        "Propertycount": 9704,
+        "Distance": 25.0,
+        "Postcode": 3155,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Botanic Ridge",
+        "Propertycount": 1240,
+        "Distance": 34.7,
+        "Postcode": 3977,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Box Hill",
+        "Propertycount": 4605,
+        "Distance": 12.3,
+        "Postcode": 3128,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Braybrook",
+        "Propertycount": 3589,
+        "Distance": 9.9,
+        "Postcode": 3019,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Briar Hill",
+        "Propertycount": 1390,
+        "Distance": 16.1,
+        "Postcode": 3088,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Brighton",
+        "Propertycount": 10579,
+        "Distance": 10.9,
+        "Postcode": 3186,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Brighton East",
+        "Propertycount": 6938,
+        "Distance": 10.5,
+        "Postcode": 3187,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Broadmeadows",
+        "Propertycount": 4294,
+        "Distance": 14.0,
+        "Postcode": 3047,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Brookfield",
+        "Propertycount": 3122,
+        "Distance": 29.8,
+        "Postcode": 3338,
+        "Regionname": "Western Victoria"
+    },
+    {
+        "Suburb": "Brooklyn",
+        "Propertycount": 962,
+        "Distance": 8.8,
+        "Postcode": 3012,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Brunswick",
+        "Propertycount": 11918,
+        "Distance": 5.2,
+        "Postcode": 3056,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Brunswick East",
+        "Propertycount": 5533,
+        "Distance": 4.3,
+        "Postcode": 3057,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Brunswick West",
+        "Propertycount": 7082,
+        "Distance": 5.6,
+        "Postcode": 3055,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Bulla",
+        "Propertycount": 271,
+        "Distance": 22.9,
+        "Postcode": 3428,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Bulleen",
+        "Propertycount": 4480,
+        "Distance": 11.4,
+        "Postcode": 3105,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Bullengarook",
+        "Propertycount": 249,
+        "Distance": 45.9,
+        "Postcode": 3437,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Bundoora",
+        "Propertycount": 10175,
+        "Distance": 12.1,
+        "Postcode": 3083,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Burnley",
+        "Propertycount": 438,
+        "Distance": 2.8,
+        "Postcode": 3121,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Burnside",
+        "Propertycount": 1607,
+        "Distance": 14.8,
+        "Postcode": 3023,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Burnside Heights",
+        "Propertycount": 1686,
+        "Distance": 14.8,
+        "Postcode": 3023,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Burwood",
+        "Propertycount": 5678,
+        "Distance": 11.1,
+        "Postcode": 3125,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Burwood East",
+        "Propertycount": 4048,
+        "Distance": 14.7,
+        "Postcode": 3151,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Cairnlea",
+        "Propertycount": 2674,
+        "Distance": 14.8,
+        "Postcode": 3023,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Camberwell",
+        "Propertycount": 8920,
+        "Distance": 7.8,
+        "Postcode": 3124,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Campbellfield",
+        "Propertycount": 1889,
+        "Distance": 15.6,
+        "Postcode": 3061,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Canterbury",
+        "Propertycount": 3265,
+        "Distance": 8.7,
+        "Postcode": 3126,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Carlton",
+        "Propertycount": 6786,
+        "Distance": 1.7,
+        "Postcode": 3053,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Carlton North",
+        "Propertycount": 3106,
+        "Distance": 3.3,
+        "Postcode": 3054,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Carnegie",
+        "Propertycount": 7822,
+        "Distance": 10.9,
+        "Postcode": 3163,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Caroline Springs",
+        "Propertycount": 7719,
+        "Distance": 14.8,
+        "Postcode": 3023,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Carrum",
+        "Propertycount": 1989,
+        "Distance": 31.2,
+        "Postcode": 3197,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Carrum Downs",
+        "Propertycount": 8060,
+        "Distance": 34.9,
+        "Postcode": 3201,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Caulfield",
+        "Propertycount": 2379,
+        "Distance": 8.8,
+        "Postcode": 3162,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Caulfield East",
+        "Propertycount": 608,
+        "Distance": 8.8,
+        "Postcode": 3145,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Caulfield North",
+        "Propertycount": 6923,
+        "Distance": 8.0,
+        "Postcode": 3161,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Caulfield South",
+        "Propertycount": 5051,
+        "Distance": 9.0,
+        "Postcode": 3162,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Chadstone",
+        "Propertycount": 3582,
+        "Distance": 12.7,
+        "Postcode": 3148,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Chelsea",
+        "Propertycount": 3906,
+        "Distance": 27.0,
+        "Postcode": 3196,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Chelsea Heights",
+        "Propertycount": 2076,
+        "Distance": 27.0,
+        "Postcode": 3196,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Cheltenham",
+        "Propertycount": 9758,
+        "Distance": 17.9,
+        "Postcode": 3192,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Chirnside Park",
+        "Propertycount": 3789,
+        "Distance": 27.1,
+        "Postcode": 3116,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Clarinda",
+        "Propertycount": 2727,
+        "Distance": 17.5,
+        "Postcode": 3169,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Clayton",
+        "Propertycount": 5837,
+        "Distance": 16.7,
+        "Postcode": 3168,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Clayton South",
+        "Propertycount": 4734,
+        "Distance": 17.5,
+        "Postcode": 3169,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Clifton Hill",
+        "Propertycount": 2954,
+        "Distance": 3.5,
+        "Postcode": 3068,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Clyde North",
+        "Propertycount": 2987,
+        "Distance": 43.4,
+        "Postcode": 3978,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Coburg",
+        "Propertycount": 11204,
+        "Distance": 7.3,
+        "Postcode": 3058,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Coburg North",
+        "Propertycount": 3445,
+        "Distance": 8.1,
+        "Postcode": 3058,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Coldstream",
+        "Propertycount": 810,
+        "Distance": 33.0,
+        "Postcode": 3770,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Collingwood",
+        "Propertycount": 4553,
+        "Distance": 1.8,
+        "Postcode": 3066,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Coolaroo",
+        "Propertycount": 1124,
+        "Distance": 17.4,
+        "Postcode": 3048,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Craigieburn",
+        "Propertycount": 15510,
+        "Distance": 20.6,
+        "Postcode": 3064,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Cranbourne",
+        "Propertycount": 7680,
+        "Distance": 34.7,
+        "Postcode": 3977,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Cranbourne East",
+        "Propertycount": 5462,
+        "Distance": 34.7,
+        "Postcode": 3977,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Cranbourne North",
+        "Propertycount": 6464,
+        "Distance": 34.7,
+        "Postcode": 3977,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Cranbourne West",
+        "Propertycount": 4939,
+        "Distance": 34.7,
+        "Postcode": 3977,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Cremorne",
+        "Propertycount": 1123,
+        "Distance": 2.5,
+        "Postcode": 3121,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Croydon",
+        "Propertycount": 11925,
+        "Distance": 23.0,
+        "Postcode": 3136,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Croydon Hills",
+        "Propertycount": 1705,
+        "Distance": 23.0,
+        "Postcode": 3136,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Croydon North",
+        "Propertycount": 2985,
+        "Distance": 23.0,
+        "Postcode": 3136,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Croydon South",
+        "Propertycount": 1863,
+        "Distance": 23.0,
+        "Postcode": 3136,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Dallas",
+        "Propertycount": 2246,
+        "Distance": 14.0,
+        "Postcode": 3047,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Dandenong",
+        "Propertycount": 10894,
+        "Distance": 24.7,
+        "Postcode": 3175,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Dandenong North",
+        "Propertycount": 8322,
+        "Distance": 24.7,
+        "Postcode": 3175,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Darley",
+        "Propertycount": 2992,
+        "Distance": 37.5,
+        "Postcode": 3340,
+        "Regionname": "Western Victoria"
+    },
+    {
+        "Suburb": "Deepdene",
+        "Propertycount": 892,
+        "Distance": 7.9,
+        "Postcode": 3103,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Deer Park",
+        "Propertycount": 6388,
+        "Distance": 14.8,
+        "Postcode": 3023,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Delahey",
+        "Propertycount": 2898,
+        "Distance": 18.0,
+        "Postcode": 3037,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Derrimut",
+        "Propertycount": 2276,
+        "Distance": 14.7,
+        "Postcode": 3030,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Diamond Creek",
+        "Propertycount": 4258,
+        "Distance": 21.8,
+        "Postcode": 3089,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Diggers Rest",
+        "Propertycount": 1184,
+        "Distance": 27.7,
+        "Postcode": 3427,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Dingley Village",
+        "Propertycount": 3940,
+        "Distance": 22.2,
+        "Postcode": 3172,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Docklands",
+        "Propertycount": 4707,
+        "Distance": 1.7,
+        "Postcode": 3008,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Doncaster",
+        "Propertycount": 9028,
+        "Distance": 13.3,
+        "Postcode": 3108,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Doncaster East",
+        "Propertycount": 10999,
+        "Distance": 14.3,
+        "Postcode": 3109,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Donvale",
+        "Propertycount": 4790,
+        "Distance": 16.1,
+        "Postcode": 3111,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Doreen",
+        "Propertycount": 7254,
+        "Distance": 25.9,
+        "Postcode": 3754,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Doveton",
+        "Propertycount": 3533,
+        "Distance": 28.8,
+        "Postcode": 3177,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Eaglemont",
+        "Propertycount": 1651,
+        "Distance": 9.7,
+        "Postcode": 3084,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "East Melbourne",
+        "Propertycount": 3040,
+        "Distance": 1.4,
+        "Postcode": 3002,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Edithvale",
+        "Propertycount": 2546,
+        "Distance": 27.0,
+        "Postcode": 3196,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Elsternwick",
+        "Propertycount": 4898,
+        "Distance": 8.0,
+        "Postcode": 3185,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Eltham",
+        "Propertycount": 6990,
+        "Distance": 18.0,
+        "Postcode": 3095,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Eltham North",
+        "Propertycount": 2346,
+        "Distance": 18.0,
+        "Postcode": 3095,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Elwood",
+        "Propertycount": 8989,
+        "Distance": 7.5,
+        "Postcode": 3184,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Emerald",
+        "Propertycount": 2259,
+        "Distance": 36.9,
+        "Postcode": 3782,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Endeavour Hills",
+        "Propertycount": 8443,
+        "Distance": 28.5,
+        "Postcode": 3802,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Epping",
+        "Propertycount": 10926,
+        "Distance": 19.6,
+        "Postcode": 3076,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Essendon",
+        "Propertycount": 9264,
+        "Distance": 7.8,
+        "Postcode": 3040,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Essendon North",
+        "Propertycount": 1308,
+        "Distance": 8.7,
+        "Postcode": 3041,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Essendon West",
+        "Propertycount": 588,
+        "Distance": 9.0,
+        "Postcode": 3040,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Eumemmerring",
+        "Propertycount": 845,
+        "Distance": 28.8,
+        "Postcode": 3177,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Eynesbury",
+        "Propertycount": 852,
+        "Distance": 29.8,
+        "Postcode": 3338,
+        "Regionname": "Western Victoria"
+    },
+    {
+        "Suburb": "Fairfield",
+        "Propertycount": 2970,
+        "Distance": 5.8,
+        "Postcode": 3078,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Fawkner",
+        "Propertycount": 5070,
+        "Distance": 12.7,
+        "Postcode": 3060,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Ferntree Gully",
+        "Propertycount": 10788,
+        "Distance": 24.8,
+        "Postcode": 3156,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Ferny Creek",
+        "Propertycount": 604,
+        "Distance": 29.5,
+        "Postcode": 3786,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Fitzroy",
+        "Propertycount": 5825,
+        "Distance": 1.9,
+        "Postcode": 3065,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Fitzroy North",
+        "Propertycount": 6244,
+        "Distance": 3.5,
+        "Postcode": 3068,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Flemington",
+        "Propertycount": 3593,
+        "Distance": 4.0,
+        "Postcode": 3031,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Footscray",
+        "Propertycount": 7570,
+        "Distance": 5.8,
+        "Postcode": 3011,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Forest Hill",
+        "Propertycount": 4385,
+        "Distance": 15.4,
+        "Postcode": 3131,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Frankston",
+        "Propertycount": 17055,
+        "Distance": 38.0,
+        "Postcode": 3199,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Frankston North",
+        "Propertycount": 2500,
+        "Distance": 36.9,
+        "Postcode": 3200,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Frankston South",
+        "Propertycount": 7566,
+        "Distance": 38.0,
+        "Postcode": 3199,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Gardenvale",
+        "Propertycount": 534,
+        "Distance": 8.4,
+        "Postcode": 3185,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Gisborne",
+        "Propertycount": 3376,
+        "Distance": 45.9,
+        "Postcode": 3437,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Gisborne South",
+        "Propertycount": 290,
+        "Distance": 45.9,
+        "Postcode": 3437,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Gladstone Park",
+        "Propertycount": 3285,
+        "Distance": 12.9,
+        "Postcode": 3043,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Glen Huntly",
+        "Propertycount": 2403,
+        "Distance": 10.3,
+        "Postcode": 3163,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Glen Iris",
+        "Propertycount": 10412,
+        "Distance": 8.3,
+        "Postcode": 3146,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Glen Waverley",
+        "Propertycount": 15321,
+        "Distance": 16.7,
+        "Postcode": 3150,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Glenroy",
+        "Propertycount": 8870,
+        "Distance": 12.2,
+        "Postcode": 3046,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Gowanbrae",
+        "Propertycount": 1071,
+        "Distance": 13.3,
+        "Postcode": 3043,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Greensborough",
+        "Propertycount": 8524,
+        "Distance": 16.1,
+        "Postcode": 3088,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Greenvale",
+        "Propertycount": 4864,
+        "Distance": 20.4,
+        "Postcode": 3059,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Guys Hill",
+        "Propertycount": 129,
+        "Distance": 39.0,
+        "Postcode": 3807,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Hadfield",
+        "Propertycount": 2606,
+        "Distance": 11.8,
+        "Postcode": 3046,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Hallam",
+        "Propertycount": 3728,
+        "Distance": 32.3,
+        "Postcode": 3803,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Hampton",
+        "Propertycount": 5454,
+        "Distance": 13.7,
+        "Postcode": 3188,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Hampton East",
+        "Propertycount": 2356,
+        "Distance": 14.2,
+        "Postcode": 3188,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Hampton Park",
+        "Propertycount": 8256,
+        "Distance": 33.3,
+        "Postcode": 3976,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Hawthorn",
+        "Propertycount": 11308,
+        "Distance": 4.9,
+        "Postcode": 3122,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Hawthorn East",
+        "Propertycount": 6482,
+        "Distance": 6.9,
+        "Postcode": 3123,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Healesville",
+        "Propertycount": 3307,
+        "Distance": 45.2,
+        "Postcode": 3777,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Heatherton",
+        "Propertycount": 1048,
+        "Distance": 18.7,
+        "Postcode": 3202,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Heathmont",
+        "Propertycount": 3794,
+        "Distance": 21.3,
+        "Postcode": 3135,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Heidelberg",
+        "Propertycount": 2890,
+        "Distance": 9.9,
+        "Postcode": 3084,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Heidelberg Heights",
+        "Propertycount": 2947,
+        "Distance": 9.8,
+        "Postcode": 3081,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Heidelberg West",
+        "Propertycount": 2674,
+        "Distance": 9.2,
+        "Postcode": 3081,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Highett",
+        "Propertycount": 4794,
+        "Distance": 16.0,
+        "Postcode": 3190,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Hillside",
+        "Propertycount": 5556,
+        "Distance": 18.0,
+        "Postcode": 3037,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Hopetoun Park",
+        "Propertycount": 242,
+        "Distance": 37.5,
+        "Postcode": 3340,
+        "Regionname": "Western Victoria"
+    },
+    {
+        "Suburb": "Hoppers Crossing",
+        "Propertycount": 13830,
+        "Distance": 18.4,
+        "Postcode": 3029,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Hughesdale",
+        "Propertycount": 3145,
+        "Distance": 12.7,
+        "Postcode": 3166,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Huntingdale",
+        "Propertycount": 768,
+        "Distance": 12.3,
+        "Postcode": 3166,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Hurstbridge",
+        "Propertycount": 1345,
+        "Distance": 26.1,
+        "Postcode": 3099,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Ivanhoe",
+        "Propertycount": 5549,
+        "Distance": 7.9,
+        "Postcode": 3079,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Ivanhoe East",
+        "Propertycount": 1554,
+        "Distance": 8.4,
+        "Postcode": 3079,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Jacana",
+        "Propertycount": 851,
+        "Distance": 14.2,
+        "Postcode": 3047,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Kalkallo",
+        "Propertycount": 121,
+        "Distance": 20.6,
+        "Postcode": 3064,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Kealba",
+        "Propertycount": 1202,
+        "Distance": 14.6,
+        "Postcode": 3021,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Keilor",
+        "Propertycount": 2339,
+        "Distance": 14.5,
+        "Postcode": 3036,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Keilor Downs",
+        "Propertycount": 3656,
+        "Distance": 15.5,
+        "Postcode": 3038,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Keilor East",
+        "Propertycount": 5629,
+        "Distance": 12.3,
+        "Postcode": 3033,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Keilor Lodge",
+        "Propertycount": 570,
+        "Distance": 15.5,
+        "Postcode": 3038,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Keilor Park",
+        "Propertycount": 1119,
+        "Distance": 12.6,
+        "Postcode": 3042,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Kensington",
+        "Propertycount": 5263,
+        "Distance": 3.9,
+        "Postcode": 3031,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Kew",
+        "Propertycount": 10331,
+        "Distance": 5.5,
+        "Postcode": 3101,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Kew East",
+        "Propertycount": 2671,
+        "Distance": 7.4,
+        "Postcode": 3102,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Keysborough",
+        "Propertycount": 8459,
+        "Distance": 25.2,
+        "Postcode": 3173,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Kilsyth",
+        "Propertycount": 4654,
+        "Distance": 26.0,
+        "Postcode": 3137,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Kings Park",
+        "Propertycount": 2878,
+        "Distance": 14.0,
+        "Postcode": 3021,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Kingsbury",
+        "Propertycount": 1414,
+        "Distance": 12.2,
+        "Postcode": 3083,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Kingsville",
+        "Propertycount": 1808,
+        "Distance": 7.1,
+        "Postcode": 3012,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Knoxfield",
+        "Propertycount": 2949,
+        "Distance": 23.3,
+        "Postcode": 3180,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Kooyong",
+        "Propertycount": 394,
+        "Distance": 6.1,
+        "Postcode": 3144,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Kurunjang",
+        "Propertycount": 3553,
+        "Distance": 31.7,
+        "Postcode": 3337,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Lalor",
+        "Propertycount": 8279,
+        "Distance": 16.3,
+        "Postcode": 3075,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Langwarrin",
+        "Propertycount": 8743,
+        "Distance": 41.0,
+        "Postcode": 3910,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Laverton",
+        "Propertycount": 2004,
+        "Distance": 15.5,
+        "Postcode": 3028,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Lilydale",
+        "Propertycount": 6732,
+        "Distance": 29.9,
+        "Postcode": 3140,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Lower Plenty",
+        "Propertycount": 1624,
+        "Distance": 14.6,
+        "Postcode": 3093,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Lynbrook",
+        "Propertycount": 2322,
+        "Distance": 33.8,
+        "Postcode": 3975,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Lysterfield",
+        "Propertycount": 2126,
+        "Distance": 24.8,
+        "Postcode": 3156,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "MacLeod",
+        "Propertycount": 4168,
+        "Distance": 12.7,
+        "Postcode": 3085,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Maidstone",
+        "Propertycount": 3873,
+        "Distance": 7.8,
+        "Postcode": 3012,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Malvern",
+        "Propertycount": 4675,
+        "Distance": 6.8,
+        "Postcode": 3144,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Malvern East",
+        "Propertycount": 8801,
+        "Distance": 10.0,
+        "Postcode": 3145,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Maribyrnong",
+        "Propertycount": 4918,
+        "Distance": 6.8,
+        "Postcode": 3032,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "McKinnon",
+        "Propertycount": 2397,
+        "Distance": 11.4,
+        "Postcode": 3204,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Meadow Heights",
+        "Propertycount": 4704,
+        "Distance": 17.4,
+        "Postcode": 3048,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Melbourne",
+        "Propertycount": 17496,
+        "Distance": 1.7,
+        "Postcode": 3000,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Melton",
+        "Propertycount": 3600,
+        "Distance": 31.7,
+        "Postcode": 3337,
+        "Regionname": "Western Victoria"
+    },
+    {
+        "Suburb": "Melton South",
+        "Propertycount": 4718,
+        "Distance": 29.8,
+        "Postcode": 3338,
+        "Regionname": "Western Victoria"
+    },
+    {
+        "Suburb": "Melton West",
+        "Propertycount": 6065,
+        "Distance": 31.7,
+        "Postcode": 3337,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Mentone",
+        "Propertycount": 6162,
+        "Distance": 20.0,
+        "Postcode": 3194,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Menzies Creek",
+        "Propertycount": 342,
+        "Distance": 32.6,
+        "Postcode": 3159,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Mernda",
+        "Propertycount": 5812,
+        "Distance": 25.9,
+        "Postcode": 3754,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Mickleham",
+        "Propertycount": 1158,
+        "Distance": 20.6,
+        "Postcode": 3064,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Middle Park",
+        "Propertycount": 2019,
+        "Distance": 3.5,
+        "Postcode": 3206,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Mill Park",
+        "Propertycount": 10529,
+        "Distance": 17.9,
+        "Postcode": 3082,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Mitcham",
+        "Propertycount": 6871,
+        "Distance": 17.2,
+        "Postcode": 3132,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Monbulk",
+        "Propertycount": 1424,
+        "Distance": 34.1,
+        "Postcode": 3793,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Mont Albert",
+        "Propertycount": 2079,
+        "Distance": 11.1,
+        "Postcode": 3127,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Montmorency",
+        "Propertycount": 3891,
+        "Distance": 16.2,
+        "Postcode": 3094,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Montrose",
+        "Propertycount": 2493,
+        "Distance": 28.8,
+        "Postcode": 3765,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Moonee Ponds",
+        "Propertycount": 6232,
+        "Distance": 6.6,
+        "Postcode": 3039,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Moorabbin",
+        "Propertycount": 2555,
+        "Distance": 14.5,
+        "Postcode": 3189,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Mooroolbark",
+        "Propertycount": 8280,
+        "Distance": 26.5,
+        "Postcode": 3138,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Mordialloc",
+        "Propertycount": 3650,
+        "Distance": 21.5,
+        "Postcode": 3195,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Mount Evelyn",
+        "Propertycount": 3532,
+        "Distance": 31.6,
+        "Postcode": 3796,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Mount Waverley",
+        "Propertycount": 13366,
+        "Distance": 14.2,
+        "Postcode": 3149,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Mulgrave",
+        "Propertycount": 7113,
+        "Distance": 18.8,
+        "Postcode": 3170,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Murrumbeena",
+        "Propertycount": 4442,
+        "Distance": 11.1,
+        "Postcode": 3163,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Narre Warren",
+        "Propertycount": 9376,
+        "Distance": 34.1,
+        "Postcode": 3805,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "New Gisborne",
+        "Propertycount": 849,
+        "Distance": 48.1,
+        "Postcode": 3438,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Newport",
+        "Propertycount": 5498,
+        "Distance": 7.5,
+        "Postcode": 3015,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Niddrie",
+        "Propertycount": 2291,
+        "Distance": 10.8,
+        "Postcode": 3042,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Noble Park",
+        "Propertycount": 11806,
+        "Distance": 22.7,
+        "Postcode": 3174,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "North Melbourne",
+        "Propertycount": 6821,
+        "Distance": 2.0,
+        "Postcode": 3051,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "North Warrandyte",
+        "Propertycount": 1058,
+        "Distance": 21.1,
+        "Postcode": 3113,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Northcote",
+        "Propertycount": 11364,
+        "Distance": 5.4,
+        "Postcode": 3070,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Notting Hill",
+        "Propertycount": 902,
+        "Distance": 16.7,
+        "Postcode": 3168,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Nunawading",
+        "Propertycount": 4973,
+        "Distance": 15.4,
+        "Postcode": 3131,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Oak Park",
+        "Propertycount": 2651,
+        "Distance": 11.4,
+        "Postcode": 3046,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Oakleigh",
+        "Propertycount": 3224,
+        "Distance": 13.3,
+        "Postcode": 3166,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Oakleigh East",
+        "Propertycount": 2547,
+        "Distance": 12.3,
+        "Postcode": 3166,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Oakleigh South",
+        "Propertycount": 3692,
+        "Distance": 15.1,
+        "Postcode": 3167,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Officer",
+        "Propertycount": 2768,
+        "Distance": 43.3,
+        "Postcode": 3809,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Olinda",
+        "Propertycount": 794,
+        "Distance": 30.6,
+        "Postcode": 3788,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Ormond",
+        "Propertycount": 3578,
+        "Distance": 11.6,
+        "Postcode": 3204,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Pakenham",
+        "Propertycount": 17384,
+        "Distance": 47.3,
+        "Postcode": 3810,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Parkdale",
+        "Propertycount": 5087,
+        "Distance": 21.5,
+        "Postcode": 3195,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Parkville",
+        "Propertycount": 2309,
+        "Distance": 2.3,
+        "Postcode": 3052,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Pascoe Vale",
+        "Propertycount": 7485,
+        "Distance": 9.2,
+        "Postcode": 3044,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Patterson Lakes",
+        "Propertycount": 3351,
+        "Distance": 31.2,
+        "Postcode": 3197,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Plenty",
+        "Propertycount": 777,
+        "Distance": 20.1,
+        "Postcode": 3090,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Plumpton",
+        "Propertycount": 1490,
+        "Distance": 23.8,
+        "Postcode": 3335,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Point Cook",
+        "Propertycount": 15542,
+        "Distance": 14.7,
+        "Postcode": 3030,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Port Melbourne",
+        "Propertycount": 8648,
+        "Distance": 3.7,
+        "Postcode": 3207,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Prahran",
+        "Propertycount": 7717,
+        "Distance": 4.5,
+        "Postcode": 3181,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Preston",
+        "Propertycount": 14577,
+        "Distance": 8.6,
+        "Postcode": 3072,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Princes Hill",
+        "Propertycount": 1008,
+        "Distance": 3.6,
+        "Postcode": 3054,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Research",
+        "Propertycount": 938,
+        "Distance": 18.0,
+        "Postcode": 3095,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Reservoir",
+        "Propertycount": 21650,
+        "Distance": 11.6,
+        "Postcode": 3073,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Richmond",
+        "Propertycount": 14949,
+        "Distance": 2.5,
+        "Postcode": 3121,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Riddells Creek",
+        "Propertycount": 1475,
+        "Distance": 47.4,
+        "Postcode": 3431,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Ringwood",
+        "Propertycount": 7785,
+        "Distance": 19.9,
+        "Postcode": 3134,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Ringwood East",
+        "Propertycount": 4407,
+        "Distance": 21.3,
+        "Postcode": 3135,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Ringwood North",
+        "Propertycount": 3619,
+        "Distance": 19.9,
+        "Postcode": 3134,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Ripponlea",
+        "Propertycount": 821,
+        "Distance": 7.3,
+        "Postcode": 3185,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Rockbank",
+        "Propertycount": 538,
+        "Distance": 23.8,
+        "Postcode": 3335,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Rosanna",
+        "Propertycount": 3540,
+        "Distance": 10.3,
+        "Postcode": 3084,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Rowville",
+        "Propertycount": 11667,
+        "Distance": 23.5,
+        "Postcode": 3178,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Roxburgh Park",
+        "Propertycount": 5833,
+        "Distance": 20.6,
+        "Postcode": 3064,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Sandhurst",
+        "Propertycount": 1721,
+        "Distance": 34.7,
+        "Postcode": 3977,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Sandringham",
+        "Propertycount": 4497,
+        "Distance": 15.2,
+        "Postcode": 3191,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Scoresby",
+        "Propertycount": 2206,
+        "Distance": 22.2,
+        "Postcode": 3179,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Seabrook",
+        "Propertycount": 1793,
+        "Distance": 15.5,
+        "Postcode": 3028,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Seaford",
+        "Propertycount": 8077,
+        "Distance": 35.4,
+        "Postcode": 3198,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Seaholme",
+        "Propertycount": 852,
+        "Distance": 11.7,
+        "Postcode": 3018,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Seddon",
+        "Propertycount": 2417,
+        "Distance": 5.9,
+        "Postcode": 3011,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Silvan",
+        "Propertycount": 457,
+        "Distance": 34.6,
+        "Postcode": 3795,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Skye",
+        "Propertycount": 2756,
+        "Distance": 34.7,
+        "Postcode": 3977,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "South Kingsville",
+        "Propertycount": 984,
+        "Distance": 8.3,
+        "Postcode": 3015,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "South Melbourne",
+        "Propertycount": 5943,
+        "Distance": 2.0,
+        "Postcode": 3205,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "South Morang",
+        "Propertycount": 7969,
+        "Distance": 20.5,
+        "Postcode": 3752,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "South Yarra",
+        "Propertycount": 14887,
+        "Distance": 3.0,
+        "Postcode": 3141,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Southbank",
+        "Propertycount": 8400,
+        "Distance": 1.0,
+        "Postcode": 3006,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Spotswood",
+        "Propertycount": 1223,
+        "Distance": 7.1,
+        "Postcode": 3015,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Springvale",
+        "Propertycount": 7412,
+        "Distance": 20.8,
+        "Postcode": 3171,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Springvale South",
+        "Propertycount": 4054,
+        "Distance": 22.2,
+        "Postcode": 3172,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "St Albans",
+        "Propertycount": 14042,
+        "Distance": 14.0,
+        "Postcode": 3021,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "St Helena",
+        "Propertycount": 915,
+        "Distance": 16.1,
+        "Postcode": 3088,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "St Kilda",
+        "Propertycount": 13240,
+        "Distance": 5.7,
+        "Postcode": 3182,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Strathmore",
+        "Propertycount": 3284,
+        "Distance": 9.0,
+        "Postcode": 3041,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Strathmore Heights",
+        "Propertycount": 389,
+        "Distance": 11.2,
+        "Postcode": 3041,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Sunbury",
+        "Propertycount": 14092,
+        "Distance": 31.7,
+        "Postcode": 3429,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Sunshine",
+        "Propertycount": 3755,
+        "Distance": 11.7,
+        "Postcode": 3020,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Sunshine North",
+        "Propertycount": 4217,
+        "Distance": 12.1,
+        "Postcode": 3020,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Sunshine West",
+        "Propertycount": 6763,
+        "Distance": 12.1,
+        "Postcode": 3020,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Surrey Hills",
+        "Propertycount": 5457,
+        "Distance": 10.7,
+        "Postcode": 3127,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Sydenham",
+        "Propertycount": 3640,
+        "Distance": 18.0,
+        "Postcode": 3037,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Tarneit",
+        "Propertycount": 10160,
+        "Distance": 18.4,
+        "Postcode": 3029,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Taylors Hill",
+        "Propertycount": 4242,
+        "Distance": 18.0,
+        "Postcode": 3037,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Taylors Lakes",
+        "Propertycount": 5336,
+        "Distance": 15.5,
+        "Postcode": 3038,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Tecoma",
+        "Propertycount": 869,
+        "Distance": 30.4,
+        "Postcode": 3160,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Templestowe",
+        "Propertycount": 6202,
+        "Distance": 15.5,
+        "Postcode": 3106,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Templestowe Lower",
+        "Propertycount": 5420,
+        "Distance": 13.2,
+        "Postcode": 3107,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "The Basin",
+        "Propertycount": 1690,
+        "Distance": 27.0,
+        "Postcode": 3154,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Thomastown",
+        "Propertycount": 7955,
+        "Distance": 15.3,
+        "Postcode": 3074,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Thornbury",
+        "Propertycount": 8870,
+        "Distance": 6.7,
+        "Postcode": 3071,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Toorak",
+        "Propertycount": 7217,
+        "Distance": 4.4,
+        "Postcode": 3142,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Travancore",
+        "Propertycount": 1052,
+        "Distance": 4.8,
+        "Postcode": 3032,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Truganina",
+        "Propertycount": 5811,
+        "Distance": 18.4,
+        "Postcode": 3029,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Tullamarine",
+        "Propertycount": 3296,
+        "Distance": 12.9,
+        "Postcode": 3043,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Upwey",
+        "Propertycount": 2591,
+        "Distance": 29.3,
+        "Postcode": 3158,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Vermont",
+        "Propertycount": 4181,
+        "Distance": 17.2,
+        "Postcode": 3133,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Vermont South",
+        "Propertycount": 4280,
+        "Distance": 17.2,
+        "Postcode": 3133,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Viewbank",
+        "Propertycount": 2698,
+        "Distance": 11.4,
+        "Postcode": 3084,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Wallan",
+        "Propertycount": 3988,
+        "Distance": 44.2,
+        "Postcode": 3756,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Wandin North",
+        "Propertycount": 1130,
+        "Distance": 35.2,
+        "Postcode": 3139,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Wantirna",
+        "Propertycount": 5424,
+        "Distance": 14.7,
+        "Postcode": 3152,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Wantirna South",
+        "Propertycount": 7082,
+        "Distance": 14.7,
+        "Postcode": 3152,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Warrandyte",
+        "Propertycount": 2003,
+        "Distance": 21.1,
+        "Postcode": 3113,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Warranwood",
+        "Propertycount": 1595,
+        "Distance": 19.9,
+        "Postcode": 3134,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Waterways",
+        "Propertycount": 709,
+        "Distance": 21.5,
+        "Postcode": 3195,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Watsonia",
+        "Propertycount": 2329,
+        "Distance": 14.7,
+        "Postcode": 3087,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Watsonia North",
+        "Propertycount": 1442,
+        "Distance": 14.5,
+        "Postcode": 3087,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Wattle Glen",
+        "Propertycount": 642,
+        "Distance": 23.6,
+        "Postcode": 3096,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Werribee",
+        "Propertycount": 16166,
+        "Distance": 14.7,
+        "Postcode": 3030,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Werribee South",
+        "Propertycount": 821,
+        "Distance": 14.7,
+        "Postcode": 3030,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "West Footscray",
+        "Propertycount": 5058,
+        "Distance": 7.4,
+        "Postcode": 3012,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "West Melbourne",
+        "Propertycount": 2230,
+        "Distance": 2.4,
+        "Postcode": 3003,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Westmeadows",
+        "Propertycount": 2474,
+        "Distance": 16.5,
+        "Postcode": 3049,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Wheelers Hill",
+        "Propertycount": 7392,
+        "Distance": 16.7,
+        "Postcode": 3150,
+        "Regionname": "South-Eastern Metropolitan"
+    },
+    {
+        "Suburb": "Whittlesea",
+        "Propertycount": 2170,
+        "Distance": 35.5,
+        "Postcode": 3757,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Wildwood",
+        "Propertycount": 83,
+        "Distance": 31.7,
+        "Postcode": 3429,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Williams Landing",
+        "Propertycount": 1999,
+        "Distance": 17.6,
+        "Postcode": 3027,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Williamstown",
+        "Propertycount": 6380,
+        "Distance": 7.5,
+        "Postcode": 3016,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Williamstown North",
+        "Propertycount": 802,
+        "Distance": 8.4,
+        "Postcode": 3016,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Windsor",
+        "Propertycount": 4380,
+        "Distance": 4.9,
+        "Postcode": 3181,
+        "Regionname": "Southern Metropolitan"
+    },
+    {
+        "Suburb": "Wollert",
+        "Propertycount": 2940,
+        "Distance": 25.5,
+        "Postcode": 3750,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Wonga Park",
+        "Propertycount": 1328,
+        "Distance": 25.2,
+        "Postcode": 3115,
+        "Regionname": "Eastern Victoria"
+    },
+    {
+        "Suburb": "Wyndham Vale",
+        "Propertycount": 5262,
+        "Distance": 27.2,
+        "Postcode": 3024,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "Yallambie",
+        "Propertycount": 1369,
+        "Distance": 14.3,
+        "Postcode": 3085,
+        "Regionname": "Northern Metropolitan"
+    },
+    {
+        "Suburb": "Yarra Glen",
+        "Propertycount": 1160,
+        "Distance": 31.4,
+        "Postcode": 3775,
+        "Regionname": "Northern Victoria"
+    },
+    {
+        "Suburb": "Yarraville",
+        "Propertycount": 6543,
+        "Distance": 6.7,
+        "Postcode": 3013,
+        "Regionname": "Western Metropolitan"
+    },
+    {
+        "Suburb": "croydon",
+        "Propertycount": 11925,
+        "Distance": 23.0,
+        "Postcode": 3136,
+        "Regionname": "Eastern Metropolitan"
+    },
+    {
+        "Suburb": "viewbank",
+        "Propertycount": 2698,
+        "Distance": 8.9,
+        "Postcode": 3084,
+        "Regionname": "Eastern Metropolitan"
+    }
+]
