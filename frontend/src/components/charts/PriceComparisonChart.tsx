@@ -1,11 +1,21 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { BarChart, Bar, XAxis, CartesianGrid, Tooltip } from 'recharts';
+import { BarChart, Bar, XAxis, CartesianGrid, Tooltip, TooltipProps } from 'recharts';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 import { ChartContainer } from "@/components/ui/chart";
 
-const PriceComparisonChart = ({ similarSuburbPrices }) => {
-  const formatPrice = (value) => {
+interface SuburbPrice {
+  suburb: string;
+  price: number;
+  isSelected: boolean;
+}
+
+interface PriceComparisonChartProps {
+  similarSuburbPrices: SuburbPrice[];
+}
+
+const PriceComparisonChart: React.FC<PriceComparisonChartProps> = ({ similarSuburbPrices }) => {
+  const formatPrice = (value: number): string => {
     return new Intl.NumberFormat('en-AU', {
       style: 'currency',
       currency: 'AUD',
@@ -21,7 +31,7 @@ const PriceComparisonChart = ({ similarSuburbPrices }) => {
     }
   };
 
-  const calculatePriceDifference = () => {
+  const calculatePriceDifference = (): number | null => {
     if (!similarSuburbPrices || similarSuburbPrices.length < 2) return null;
     const selectedPrice = similarSuburbPrices[0].price;
     const avgOtherPrices = similarSuburbPrices
@@ -51,15 +61,15 @@ const PriceComparisonChart = ({ similarSuburbPrices }) => {
                 dataKey="suburb" 
                 tickLine={false} 
                 axisLine={false} 
-                tickFormatter={(value) => value.length > 15 ? `${value.slice(0, 15)}...` : value} 
+                tickFormatter={(value: string) => value.length > 15 ? `${value.slice(0, 15)}...` : value} 
               />
               <Tooltip
-                content={({ active, payload }) => {
+                content={({ active, payload }: TooltipProps<number, string>) => {
                   if (!active || !payload?.length) return null;
                   return (
                     <div className="bg-white p-2 border rounded shadow-lg">
                       <p className="font-medium">{payload[0].payload.suburb}</p>
-                      <p className="text-sm">{formatPrice(payload[0].value)}</p>
+                      <p className="text-sm">{formatPrice(payload[0].value as number)}</p>
                     </div>
                   );
                 }}
@@ -76,14 +86,14 @@ const PriceComparisonChart = ({ similarSuburbPrices }) => {
       <CardFooter className="flex-col items-start gap-2 text-sm">
         {calculatePriceDifference() !== null && (
           <div className="flex gap-2 font-medium leading-none">
-            {calculatePriceDifference() > 0 ? (
+            {calculatePriceDifference()! > 0 ? (
               <>
-                Higher than nearby suburbs by {Math.abs(calculatePriceDifference()).toFixed(1)}%
+                Higher than nearby suburbs by {Math.abs(calculatePriceDifference()!).toFixed(1)}%
                 <TrendingUp className="h-4 w-4 text-green-500" />
               </>
             ) : (
               <>
-                Lower than nearby suburbs by {Math.abs(calculatePriceDifference()).toFixed(1)}%
+                Lower than nearby suburbs by {Math.abs(calculatePriceDifference()!).toFixed(1)}%
                 <TrendingDown className="h-4 w-4 text-red-500" />
               </>
             )}
@@ -98,3 +108,4 @@ const PriceComparisonChart = ({ similarSuburbPrices }) => {
 };
 
 export default PriceComparisonChart;
+

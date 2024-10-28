@@ -1,4 +1,4 @@
-import HousePricePredictor from '../components/house-price/HousePricePredictor';
+import HousePricePredictor from '../components/form/HousePricePredictor';
 
 export default function Home() {
   return (

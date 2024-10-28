@@ -6,11 +6,33 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Loader2 } from 'lucide-react';
-import PriceComparisonChart from './PriceComparisonChart';
+import PriceComparisonChart from '../charts/PriceComparisonChart';
 import suburbData from '@/data/suburb_data.json';
 
-const HousePricePredictor = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  Rooms: string;
+  Distance: string;
+  Postcode: string;
+  Bedroom2: string;
+  Bathroom: string;
+  Car: string;
+  Landsize: string;
+  BuildingArea: string;
+  YearBuilt: string;
+  Propertycount: string;
+  Type: string;
+  Method: string;
+  Regionname: string;
+  CouncilArea: string;
+  Suburb: string;
+}
+
+interface PredictionResult {
+  predicted_price: number;
+}
+
+const HousePricePredictor: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     Rooms: '',
     Distance: '',
     Postcode: '',
@@ -28,12 +50,12 @@ const HousePricePredictor = () => {
     Suburb: ''
   });
 
-  const [prediction, setPrediction] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [similarSuburbPrices, setSimilarSuburbPrices] = useState(null);
+  const [prediction, setPrediction] = useState<number | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const [similarSuburbPrices, setSimilarSuburbPrices] = useState<{ suburb: string; price: number; isSelected: boolean; }[] | null>(null);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -41,14 +63,14 @@ const HousePricePredictor = () => {
     }));
   };
 
-  const handleSelectChange = (name, value) => {
+  const handleSelectChange = (name: keyof FormData, value: string) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSuburbChange = (value) => {
+  const handleSuburbChange = (value: string) => {
     const selectedSuburb = suburbData.find(s => s.Suburb === value);
     if (selectedSuburb) {
       setFormData(prev => ({
@@ -63,7 +85,7 @@ const HousePricePredictor = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -105,7 +127,7 @@ const HousePricePredictor = () => {
       }
 
       const results = await Promise.all(
-        responses.map(response => response.json())
+        responses.map(response => response.json() as Promise<PredictionResult>)
       );
 
       setPrediction(results[0].predicted_price);
@@ -125,7 +147,7 @@ const HousePricePredictor = () => {
     }
   };
 
-  const formatPrice = (value) => {
+  const formatPrice = (value: number) => {
     return new Intl.NumberFormat('en-AU', {
       style: 'currency',
       currency: 'AUD',
@@ -334,3 +356,4 @@ const HousePricePredictor = () => {
 };
 
 export default HousePricePredictor;
+
