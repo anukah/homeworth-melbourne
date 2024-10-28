@@ -8,7 +8,11 @@ import PriceComparisonChart from '@/components/charts/PriceComparisonChart';
 
 interface PredictionData {
   prediction: number;
-  similarPrices: Array<{ suburb: string; price: number; isSelected: boolean; }>;
+  similarPrices: Array<{
+    suburb: string;
+    price: number;
+    isSelected: boolean;
+  }>;
 }
 
 const PredictionResults = () => {
@@ -33,13 +37,18 @@ const PredictionResults = () => {
 
   if (!predictionData) {
     return (
-      <div className="max-w-4xl mx-auto p-4">
-        <Card>
+      <div className="min-h-[50vh] flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+        <Card className="w-full max-w-lg">
           <CardContent className="p-6">
-            <p>No prediction data available. Please make a prediction first.</p>
-            <Button onClick={() => router.push('/price-predictor')} className="mt-4">
-              Go to Predictor
-            </Button>
+            <div className="text-center space-y-4">
+              <p className="text-zinc-600">No prediction data available. Please make a prediction first.</p>
+              <Button 
+                onClick={() => router.push('/price-predictor')} 
+                className="w-full sm:w-auto"
+              >
+                Go to Predictor
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -47,29 +56,42 @@ const PredictionResults = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <Card className="bg-white shadow-lg">
-        <CardHeader>
-          <CardTitle className="text-xl font-bold text-gray-900">Prediction Results</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <Alert className="bg-green-50 border-green-200">
-            <AlertTitle className="text-green-800">Estimated Price</AlertTitle>
-            <AlertDescription className="text-2xl font-bold text-green-900 mt-2">
-              {formatPrice(predictionData.prediction)}
-            </AlertDescription>
-          </Alert>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <Card className="bg-white shadow-lg overflow-hidden">
+          <CardHeader className="p-4 sm:p-6 border-b border-gray-100">
+            <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
+              Prediction Results
+            </CardTitle>
+          </CardHeader>
+          
+          <CardContent className="space-y-6 p-4 sm:p-6">
+            <Alert className="bg-green-50 border-green-200">
+              <AlertTitle className="text-green-800 text-base sm:text-lg">
+                Estimated Price
+              </AlertTitle>
+              <AlertDescription className="text-xl sm:text-2xl md:text-3xl font-bold text-green-900 mt-2">
+                {formatPrice(predictionData.prediction)}
+              </AlertDescription>
+            </Alert>
 
-          <PriceComparisonChart similarSuburbPrices={predictionData.similarPrices} />
+            <div className="rounded-lg overflow-hidden">
+              <PriceComparisonChart 
+                similarSuburbPrices={predictionData.similarPrices} 
+              />
+            </div>
 
-          <Button 
-            onClick={() => router.push('.')}
-            className="w-full"
-          >
-            Make Another Prediction
-          </Button>
-        </CardContent>
-      </Card>
+            <div className="pt-4">
+              <Button
+                onClick={() => router.push('.')}
+                className="w-full sm:w-auto sm:min-w-[200px] mx-auto block"
+              >
+                Make Another Prediction
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };
