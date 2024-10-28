@@ -164,8 +164,8 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
   return (
     <Card className="bg-white shadow-lg">
       <CardHeader className="space-y-1 pb-4 border-b">
-        <CardTitle className="text-xl font-bold text-gray-900">Melbourne Housing Price Predictor</CardTitle>
-        <CardDescription>Enter property details to get an estimated price</CardDescription>
+        <CardTitle className="text-xl font-bold text-gray-900 text-center">Melbourne Housing Price Predictor</CardTitle>
+        <CardDescription className='text-center'>Enter property details to get an estimated price</CardDescription>
       </CardHeader>
       <CardContent className="pt-4">
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -298,7 +298,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
                   onValueChange={(value) => handleSelectChange('YearBuilt', value)}
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select year range" />
+                    <SelectValue placeholder="Select Year Range" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="1950">1940-1960</SelectItem>
@@ -315,7 +315,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
                   onValueChange={(value) => handleSelectChange('Type', value)}
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select type" />
+                    <SelectValue placeholder="Select Method" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="h">House</SelectItem>

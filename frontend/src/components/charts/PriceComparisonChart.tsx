@@ -65,7 +65,7 @@ const PriceComparisonChart: React.FC<PriceComparisonChartProps> = ({ similarSubu
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="h-[350px] w-full">
+        <div className="h-fit w-full">
           <ChartContainer config={chartConfig}>
             <BarChart 
               data={sortedData}
@@ -96,7 +96,7 @@ const PriceComparisonChart: React.FC<PriceComparisonChartProps> = ({ similarSubu
               />
               <Bar 
                 dataKey="price" 
-                fill="hsl(221 83.2% 53.3% / 0.3)"
+                fill="hsl(221 8.2% 53.3% / 0.3)"
                 radius={[4, 4, 0, 0]}
                 shape={(props: any) => {
                   const { x, y, width, height, fill } = props;
@@ -108,10 +108,10 @@ const PriceComparisonChart: React.FC<PriceComparisonChartProps> = ({ similarSubu
                       y={y}
                       width={width}
                       height={height}
-                      fill={isSelected ? "hsl(221 83.2% 53.3%)" : fill}
+                      fill={isSelected ? "hsl(221 8.2% 53.3%)" : fill}
                       rx={4}
                       ry={4}
-                      className={isSelected ? "stroke-2 stroke-blue-600 border-dashed" : ""}
+                      className={isSelected ? "stroke-2 stroke-black border-dashed" : ""}
                     />
                   );
                 }}
@@ -122,7 +122,7 @@ const PriceComparisonChart: React.FC<PriceComparisonChartProps> = ({ similarSubu
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm border-t border-zinc-200">
         {calculatePriceDifference() !== null && (
-          <div className="flex gap-2 font-medium leading-none text-zinc-950">
+          <div className="flex gap-2 font-medium leading-none text-zinc-950 mt-4">
             {calculatePriceDifference()! > 0 ? (
             
               <>

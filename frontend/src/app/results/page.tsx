@@ -37,7 +37,7 @@ const PredictionResults = () => {
 
   if (!predictionData) {
     return (
-      <div className="min-h-[50vh] flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+      <div className="flex justify-center items-center h-screen max-w-4xl mx-auto p-4">
         <Card className="w-full max-w-lg">
           <CardContent className="p-6">
             <div className="text-center space-y-4">
@@ -60,17 +60,17 @@ const PredictionResults = () => {
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Card className="bg-white shadow-lg overflow-hidden">
           <CardHeader className="p-4 sm:p-6 border-b border-gray-100">
-            <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
+            <CardTitle className="text-xl sm:text-xl font-bold text-gray-900">
               Prediction Results
             </CardTitle>
           </CardHeader>
           
-          <CardContent className="space-y-6 p-4 sm:p-6">
+          <CardContent className="space-y-6 p-4 sm:p-6 ">
             <Alert className="bg-green-50 border-green-200">
               <AlertTitle className="text-green-800 text-base sm:text-lg">
                 Estimated Price
               </AlertTitle>
-              <AlertDescription className="text-xl sm:text-2xl md:text-3xl font-bold text-green-900 mt-2">
+              <AlertDescription className="text-2xl sm:text-2xl md:text-3xl font-bold text-green-900 mt-2">
                 {formatPrice(predictionData.prediction)}
               </AlertDescription>
             </Alert>
