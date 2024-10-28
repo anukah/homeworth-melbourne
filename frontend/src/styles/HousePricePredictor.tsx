@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Loader2 } from 'lucide-react';
-import PriceComparisonChart from '../charts/PriceComparisonChart';
+import PriceComparisonChart from '../components/charts/PriceComparisonChart';
 import suburbData from '@/data/suburb_data.json';
 
 interface FormData {
