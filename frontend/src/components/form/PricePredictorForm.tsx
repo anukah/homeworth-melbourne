@@ -1,6 +1,4 @@
-// components/PredictorForm.tsx
-"use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -57,7 +55,18 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // (handleInputChange, handleSelectChange, handleSuburbChange remain the same)
+  // Update Rooms whenever bedrooms or bathrooms change
+  useEffect(() => {
+    const bedrooms = parseInt(formData.Bedroom2) || 0;
+    const bathrooms = parseInt(formData.Bathroom) || 0;
+    const totalRooms = bedrooms + bathrooms;
+    
+    setFormData(prev => ({
+      ...prev,
+      Rooms: totalRooms.toString()
+    }));
+  }, [formData.Bedroom2, formData.Bathroom]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -148,7 +157,6 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
     }
   };
 
-  // Return just the form part of your original component
   return (
     <Card className="bg-white shadow-lg">
       <CardHeader className="space-y-1 pb-4 border-b">
@@ -157,156 +165,144 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
       </CardHeader>
       <CardContent className="pt-4">
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Keep all your form fields exactly as they were */}
           <div className="space-y-4">
-              <div className="flex gap-4">
-                <div className="flex-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Suburb</label>
-                  <Select value={formData.Suburb} onValueChange={handleSuburbChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select suburb" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {suburbData.map((suburb) => (
-                        <SelectItem key={suburb.Suburb} value={suburb.Suburb}>
-                          {suburb.Suburb}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="w-32">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Distance (km)</label>
-                  <Input
-                    type="number"
-                    name="Distance"
-                    value={formData.Distance}
-                    className="bg-gray-50"
-                    readOnly
-                  />
-                </div>
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Suburb</label>
+                <Select value={formData.Suburb} onValueChange={handleSuburbChange}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select suburb" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {suburbData.map((suburb) => (
+                      <SelectItem key={suburb.Suburb} value={suburb.Suburb}>
+                        {suburb.Suburb}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
-
-              <div className="grid grid-cols-4 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Rooms</label>
-                  <Input
-                    type="number"
-                    name="Rooms"
-                    value={formData.Rooms}
-                    onChange={handleInputChange}
-                    min="1"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Bedrooms</label>
-                  <Input
-                    type="number"
-                    name="Bedroom2"
-                    value={formData.Bedroom2}
-                    onChange={handleInputChange}
-                    min="1"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Bathrooms</label>
-                  <Input
-                    type="number"
-                    name="Bathroom"
-                    value={formData.Bathroom}
-                    onChange={handleInputChange}
-                    min="1"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Car Spaces</label>
-                  <Input
-                    type="number"
-                    name="Car"
-                    value={formData.Car}
-                    onChange={handleInputChange}
-                    min="0"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Land Size (m²)</label>
-                  <Input
-                    type="number"
-                    name="Landsize"
-                    value={formData.Landsize}
-                    onChange={handleInputChange}
-                    min="0"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Building Area (m²)</label>
-                  <Input
-                    type="number"
-                    name="BuildingArea"
-                    value={formData.BuildingArea}
-                    onChange={handleInputChange}
-                    min="0"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Year Built</label>
-                  <Input
-                    type="number"
-                    name="YearBuilt"
-                    value={formData.YearBuilt}
-                    onChange={handleInputChange}
-                    min="1800"
-                    max={new Date().getFullYear()}
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Property Type</label>
-                  <Select
-                    value={formData.Type}
-                    onValueChange={(value) => handleSelectChange('Type', value)}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="h">House</SelectItem>
-                      <SelectItem value="u">Unit</SelectItem>
-                      <SelectItem value="t">Townhouse</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Sale Method</label>
-                  <Select
-                    value={formData.Method}
-                    onValueChange={(value) => handleSelectChange('Method', value)}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select method" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="S">Private Sale</SelectItem>
-                      <SelectItem value="A">Auction</SelectItem>
-                      <SelectItem value="SP">Property Sale</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+              <div className="w-32">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Distance (km)</label>
+                <Input
+                  type="number"
+                  name="Distance"
+                  value={formData.Distance}
+                  className="bg-gray-50"
+                  readOnly
+                />
               </div>
             </div>
-        
+
+            <div className="grid grid-cols-3 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Bedrooms</label>
+                <Input
+                  type="number"
+                  name="Bedroom2"
+                  value={formData.Bedroom2}
+                  onChange={handleInputChange}
+                  min="1"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Bathrooms</label>
+                <Input
+                  type="number"
+                  name="Bathroom"
+                  value={formData.Bathroom}
+                  onChange={handleInputChange}
+                  min="1"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Car Spaces</label>
+                <Input
+                  type="number"
+                  name="Car"
+                  value={formData.Car}
+                  onChange={handleInputChange}
+                  min="0"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Land Size (m²)</label>
+                <Input
+                  type="number"
+                  name="Landsize"
+                  value={formData.Landsize}
+                  onChange={handleInputChange}
+                  min="0"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Building Area (m²)</label>
+                <Input
+                  type="number"
+                  name="BuildingArea"
+                  value={formData.BuildingArea}
+                  onChange={handleInputChange}
+                  min="0"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Year Built</label>
+                <Input
+                  type="number"
+                  name="YearBuilt"
+                  value={formData.YearBuilt}
+                  onChange={handleInputChange}
+                  min="1800"
+                  max={new Date().getFullYear()}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Property Type</label>
+                <Select
+                  value={formData.Type}
+                  onValueChange={(value) => handleSelectChange('Type', value)}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="h">House</SelectItem>
+                    <SelectItem value="u">Unit</SelectItem>
+                    <SelectItem value="t">Townhouse</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Sale Method</label>
+                <Select
+                  value={formData.Method}
+                  onValueChange={(value) => handleSelectChange('Method', value)}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select method" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="S">Private Sale</SelectItem>
+                    <SelectItem value="A">Auction</SelectItem>
+                    <SelectItem value="SP">Property Sale</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </div>
+
           <Button 
             type="submit" 
             className="w-full py-2"
