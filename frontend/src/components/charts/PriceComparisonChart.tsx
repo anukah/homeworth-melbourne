@@ -1,3 +1,4 @@
+//frontend/src/components/form/PricePredictorForm.tsx
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, LabelList, Tooltip, TooltipProps, ResponsiveContainer } from 'recharts';
