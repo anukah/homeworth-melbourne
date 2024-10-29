@@ -1,3 +1,4 @@
+//frontend/src/app/results/page.tsx
 "use client";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -38,7 +39,7 @@ const PredictionResults = () => {
   };
 
   const handleNewPrediction = () => {
-    router.push('/');
+    router.push('./');
     localStorage.removeItem('predictionResult');
   };
 

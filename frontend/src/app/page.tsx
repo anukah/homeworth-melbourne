@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import PredictorForm from '../components/form/PricePredictorForm';
+import PredictorForm from '@/components/form/PricePredictorForm';
 
 const PricePredictorPage = () => {
   const router = useRouter();
