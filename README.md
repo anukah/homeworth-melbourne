@@ -2,6 +2,10 @@
 
 This project is a full-stack application for predicting house prices in Melbourne based on various property features. The project includes a machine learning backend using FastAPI and a frontend built with Next.js and ShadCN UI components.
 
+![Input Form](./documentation-images/form.png)
+![Input Form After Filling](./documentation-images/form-filled.png)
+![Result Page](./documentation-images/result.png)
+![Filters](./documentation-images/result-filters.png)
 ## Project Structure
 
 ```
