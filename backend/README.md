@@ -10,6 +10,7 @@ This part of the project provides a machine learning pipeline for predicting the
 ├── models/ 
 │ └── house_price_pipeline.joblib # Trained model pipeline saved as joblib file 
 ├── server.py # backend file for FastAPI server
+├── requirements.txt # text file containing all necessary libraries
 ├── train.py # backend file for training
 └── README.md # Project documentation
 ```
