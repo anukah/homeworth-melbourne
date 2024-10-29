@@ -1,3 +1,4 @@
+//frontend/src/components/form/PricePredictorForm.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -33,7 +34,10 @@ interface PredictionResult {
 }
 
 interface PredictorFormProps {
-  onPredictionComplete: (prediction: number, similarPrices: Array<{ suburb: string; price: number; isSelected: boolean; }>) => void;
+  onPredictionComplete: (
+    prediction: number,
+    similarPrices: Array<{ suburb: string; price: number; isSelected: boolean }>
+  ) => void;
 }
 
 const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) => {
@@ -108,12 +112,15 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
 
     try {
       const distance = parseFloat(formData.Distance);
+      
       const similarSuburbs = suburbData
-        .filter(s => 
-          Math.abs(s.Distance - distance) <= 2 && 
-          s.Suburb !== formData.Suburb
-        )
-        .slice(0, 4);
+        .map(suburb => ({
+          ...suburb,
+          distanceDiff: Math.abs(suburb.Distance - distance)
+        }))
+        .filter(s => s.Suburb !== formData.Suburb)
+        .sort((a, b) => a.distanceDiff - b.distanceDiff)
+        .slice(0, 10);
 
       const predictions = [
         formData,

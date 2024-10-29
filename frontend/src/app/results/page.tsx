@@ -71,7 +71,7 @@ const PredictionResults = () => {
               Prediction Results
             </CardTitle>
           </CardHeader>
-          
+
           <CardContent className="space-y-6 p-4 sm:p-6">
             <Alert className="bg-green-50 border-green-200">
               <AlertTitle className="text-green-800 text-base sm:text-lg">
@@ -83,8 +83,8 @@ const PredictionResults = () => {
             </Alert>
 
             <div className="rounded-lg overflow-hidden">
-              <PriceComparisonChart 
-                similarSuburbPrices={predictionData.similarPrices} 
+              <PriceComparisonChart
+                similarSuburbPrices={predictionData.similarPrices}
               />
             </div>
 
