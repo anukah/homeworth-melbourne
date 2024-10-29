@@ -180,7 +180,3 @@ app.add_middleware(
     allow_headers=["*"],
 )
 ```
-
-### License
-
-This project is licensed under the MIT License.
