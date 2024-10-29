@@ -1,5 +1,5 @@
 
-# HomeWorth-Melbourne API
+# HomeWorth-Melbourne - Backend
 
 This part of the project provides a machine learning pipeline for predicting the house prices based on features such as the number of rooms, location, building area, etc. The pipeline includes data preprocessing, model training, and deployment via a FastAPI server for easy API access.
 
