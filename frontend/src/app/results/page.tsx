@@ -10,6 +10,8 @@ interface PredictionData {
   prediction: number;
   similarPrices: Array<{
     suburb: string;
+    bedrooms: number;
+    bathrooms: number;
     price: number;
     isSelected: boolean;
   }>;
@@ -35,15 +37,20 @@ const PredictionResults = () => {
     }).format(value);
   };
 
+  const handleNewPrediction = () => {
+    router.push('/');
+    localStorage.removeItem('predictionResult');
+  };
+
   if (!predictionData) {
     return (
-      <div className="flex justify-center items-center h-screen max-w-4xl mx-auto p-4">
+      <div className="flex justify-center items-center h-screen w-screen mx-auto p-4">
         <Card className="w-full max-w-lg">
           <CardContent className="p-6">
             <div className="text-center space-y-4">
               <p className="text-zinc-600">No prediction data available. Please make a prediction first.</p>
               <Button 
-                onClick={() => router.push('/price-predictor')} 
+                onClick={handleNewPrediction} 
                 className="w-full sm:w-auto"
               >
                 Go to Predictor
@@ -65,7 +72,7 @@ const PredictionResults = () => {
             </CardTitle>
           </CardHeader>
           
-          <CardContent className="space-y-6 p-4 sm:p-6 ">
+          <CardContent className="space-y-6 p-4 sm:p-6">
             <Alert className="bg-green-50 border-green-200">
               <AlertTitle className="text-green-800 text-base sm:text-lg">
                 Estimated Price
@@ -83,7 +90,7 @@ const PredictionResults = () => {
 
             <div className="pt-4">
               <Button
-                onClick={() => router.push('.')}
+                onClick={handleNewPrediction}
                 className="w-full sm:w-auto sm:min-w-[200px] mx-auto block"
               >
                 Make Another Prediction
