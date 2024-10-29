@@ -1,4 +1,3 @@
-# backend/main.py
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -10,20 +9,6 @@ from sklearn.ensemble import VotingRegressor, RandomForestRegressor, GradientBoo
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import joblib
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-
-app = FastAPI()
-
-# Enable CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Load data
 df = pd.read_csv('data/dataset.csv')
@@ -87,46 +72,18 @@ full_pipeline = Pipeline([
 ])
 
 # Train model
+print("Training model...")
 full_pipeline.fit(X_train, y_train)
 
+# Evaluate model
+y_pred = full_pipeline.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+print(f"Mean Squared Error: {mse}")
+
 # Save model
+print("Saving model...")
 joblib.dump(full_pipeline, 'models/house_price_pipeline.joblib')
-
-# Pydantic model for input validation
-class HouseFeatures(BaseModel):
-    Rooms: int
-    Distance: float
-    Postcode: int
-    Bedroom2: int
-    Bathroom: int
-    Car: int
-    Landsize: float
-    BuildingArea: float
-    YearBuilt: int
-    Propertycount: int
-    Type: str
-    Method: str
-    Regionname: str
-    CouncilArea: str
-
-@app.post("/predict")
-async def predict_price(features: HouseFeatures):
-    try:
-        # Convert input to DataFrame
-        input_data = pd.DataFrame([features.dict()])
-        
-        # Make prediction
-        prediction = full_pipeline.predict(input_data)
-        
-        return {"predicted_price": float(prediction[0])}
-    except Exception as e:
-        return {"error": str(e)}
-
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy"}
+print("Model saved successfully!")
 
 if __name__ == "__main__":
-    import uvicorn
-    print("Starting server...")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    print("Starting model training...")
