@@ -2434,19 +2434,5 @@
         "Distance": 6.7,
         "Postcode": 3013,
         "Regionname": "Western Metropolitan"
-    },
-    {
-        "Suburb": "croydon",
-        "Propertycount": 11925,
-        "Distance": 23.0,
-        "Postcode": 3136,
-        "Regionname": "Eastern Metropolitan"
-    },
-    {
-        "Suburb": "viewbank",
-        "Propertycount": 2698,
-        "Distance": 8.9,
-        "Postcode": 3084,
-        "Regionname": "Eastern Metropolitan"
     }
 ]
