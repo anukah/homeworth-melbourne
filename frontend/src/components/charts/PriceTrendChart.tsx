@@ -21,10 +21,29 @@ interface PriceTrendChartProps {
 }
 
 const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => {
-  // State for year range filter
+  // Find the price data for the selected suburb
+  const suburbData = suburbPrices.find(
+    item => item.Suburb === selectedSuburb?.toUpperCase()
+  );
+
+  // Transform the data for Recharts
+  const chartData: ChartDataPoint[] = suburbData
+    ? Object.entries(suburbData)
+        .filter(([key]) => key !== 'Suburb' && !isNaN(Number(key)))
+        .map(([year, price]) => ({
+          year,
+          price: typeof price === 'string' ? Number(price) : price
+        }))
+        .sort((a, b) => Number(a.year) - Number(b.year))
+    : [];
+
+  // Determine the initial year range, setting the end year to either the latest year in the data or the current year
   const [yearRange, setYearRange] = useState<{ start: number; end: number }>({
     start: 2000,
-    end: new Date().getFullYear(),
+    end: Math.max(
+      ...chartData.map((data) => Number(data.year)),
+      new Date().getFullYear()
+    ),
   });
 
   // Early return if no suburb is selected
@@ -42,22 +61,6 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
       </Card>
     );
   }
-
-  // Find the price data for the selected suburb
-  const suburbData = suburbPrices.find(
-    item => item.Suburb === selectedSuburb.toUpperCase()
-  );
-
-  // Transform the data for Recharts
-  const chartData: ChartDataPoint[] = suburbData
-    ? Object.entries(suburbData)
-        .filter(([key]) => key !== 'Suburb' && !isNaN(Number(key)))
-        .map(([year, price]) => ({
-          year,
-          price: typeof price === 'string' ? Number(price) : price
-        }))
-        .sort((a, b) => Number(a.year) - Number(b.year))
-    : [];
 
   // Filter data by the selected year range
   const filteredChartData = chartData.filter(
@@ -104,14 +107,6 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
       </Card>
     );
   }
-
-  // Calculate min and max values for better Y axis range
-  const minPrice = Math.min(...filteredChartData.map(d => d.price));
-  const maxPrice = Math.max(...filteredChartData.map(d => d.price));
-  const yAxisDomain = [
-    Math.floor(minPrice * 0.9),
-    Math.ceil(maxPrice * 1.1)
-  ];
 
   return (
     <Card>
@@ -174,7 +169,6 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
                 }}
               />
               <YAxis
-                domain={yAxisDomain}
                 tick={{ display: 'none' }}
                 tickLine={false}
                 axisLine={false}

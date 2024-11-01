@@ -92,14 +92,9 @@ const PredictionResults = () => {
           </Card>
 
           {/* Charts Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
             {/* Comparison Chart */}
             <Card className="bg-white shadow-lg overflow-hidden">
-              <CardHeader className="p-4 sm:p-6 border-b border-gray-100">
-                <CardTitle className="text-lg font-bold text-gray-900">
-                  Price Comparison with Similar Suburbs
-                </CardTitle>
-              </CardHeader>
               <CardContent className="p-4 sm:p-6">
                 <div className="rounded-lg overflow-hidden">
                   <PriceComparisonChart
@@ -110,7 +105,7 @@ const PredictionResults = () => {
             </Card>
 
             {/* Trend Chart */}
-            <Card className="bg-white shadow-lg overflow-hidden">
+            <Card className="bg-white shadow-lg overflow-hidden mt-6">
               <CardContent className="p-4 sm:p-6">
                 {selectedSuburb ? (
                   <PriceTrendChart selectedSuburb={selectedSuburb}/>

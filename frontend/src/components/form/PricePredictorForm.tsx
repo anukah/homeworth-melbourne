@@ -1,4 +1,3 @@
-// PricePredictorForm.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -85,7 +84,8 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
   const handleSelectChange = (name: keyof FormData, value: string) => {
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
+      ...(name === 'Type' && value === 'u' ? { Landsize: '0' } : {})
     }));
   };
 
@@ -281,32 +281,6 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
                 />
               </div>
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Land Size (m²)</label>
-                <Input
-                  type="number"
-                  name="Landsize"
-                  value={formData.Landsize}
-                  onChange={handleInputChange}
-                  min="0"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Building Area (m²)</label>
-                <Input
-                  type="number"
-                  name="BuildingArea"
-                  value={formData.BuildingArea}
-                  onChange={handleInputChange}
-                  min="0"
-                  required
-                />
-              </div>
-            </div>
-
             <div className="grid grid-cols-3 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Year Built</label>
@@ -356,6 +330,31 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
                     <SelectItem value="SP">Property Sale</SelectItem>
                   </SelectContent>
                 </Select>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Land Size (m²)</label>
+                <Input
+                  type="number"
+                  name="Landsize"
+                  value={formData.Landsize}
+                  onChange={handleInputChange}
+                  min="0"
+                  readOnly={formData.Type === 'u'}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Building Area (m²)</label>
+                <Input
+                  type="number"
+                  name="BuildingArea"
+                  value={formData.BuildingArea}
+                  onChange={handleInputChange}
+                  min="0"
+                  required
+                />
               </div>
             </div>
           </div>

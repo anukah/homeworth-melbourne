@@ -72,14 +72,6 @@ export default function RootLayout({
             {children}
           </div>
         </main>
-
-        <footer className="w-full border-t border-gray-200 bg-white py-4">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm text-gray-500">
-              © {new Date().getFullYear()} Property Price Predictor. All rights reserved.
-            </p>
-          </div>
-        </footer>
       </body>
     </html>
   );
