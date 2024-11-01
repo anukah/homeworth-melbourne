@@ -1,4 +1,3 @@
-//frontend/src/app/results/page.tsx
 "use client";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -6,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import PriceComparisonChart from '@/components/charts/PriceComparisonChart';
+import PriceTrendChart from '@/components/charts/PriceTrendChart';
 
 interface PredictionData {
   prediction: number;
@@ -16,6 +16,7 @@ interface PredictionData {
     price: number;
     isSelected: boolean;
   }>;
+  selectedSuburb?: string;
 }
 
 const PredictionResults = () => {
@@ -63,42 +64,75 @@ const PredictionResults = () => {
     );
   }
 
+  // Find the selected suburb from the similarPrices array
+  const selectedSuburb = predictionData.similarPrices.find(item => item.isSelected)?.suburb;
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <Card className="bg-white shadow-lg overflow-hidden">
-          <CardHeader className="p-4 sm:p-6 border-b border-gray-100">
-            <CardTitle className="text-xl sm:text-xl font-bold text-gray-900">
-              Prediction Results
-            </CardTitle>
-          </CardHeader>
+      <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="space-y-6">
+          {/* Prediction Card */}
+          <Card className="bg-white shadow-lg overflow-hidden">
+            <CardHeader className="p-4 sm:p-6 border-b border-gray-100">
+              <CardTitle className="text-xl sm:text-xl font-bold text-gray-900">
+                Prediction Results
+              </CardTitle>
+            </CardHeader>
 
-          <CardContent className="space-y-6 p-4 sm:p-6">
-            <Alert className="bg-green-50 border-green-200">
-              <AlertTitle className="text-green-800 text-base sm:text-lg">
-                Estimated Price
-              </AlertTitle>
-              <AlertDescription className="text-2xl sm:text-2xl md:text-3xl font-bold text-green-900 mt-2">
-                {formatPrice(predictionData.prediction)}
-              </AlertDescription>
-            </Alert>
+            <CardContent className="p-4 sm:p-6">
+              <Alert className="bg-green-50 border-green-200">
+                <AlertTitle className="text-green-800 text-base sm:text-lg">
+                  Estimated Price
+                </AlertTitle>
+                <AlertDescription className="text-2xl sm:text-2xl md:text-3xl font-bold text-green-900 mt-2">
+                  {formatPrice(predictionData.prediction)}
+                </AlertDescription>
+              </Alert>
+            </CardContent>
+          </Card>
 
-            <div className="rounded-lg overflow-hidden">
-              <PriceComparisonChart
-                similarSuburbPrices={predictionData.similarPrices}
-              />
-            </div>
+          {/* Charts Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Comparison Chart */}
+            <Card className="bg-white shadow-lg overflow-hidden">
+              <CardHeader className="p-4 sm:p-6 border-b border-gray-100">
+                <CardTitle className="text-lg font-bold text-gray-900">
+                  Price Comparison with Similar Suburbs
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6">
+                <div className="rounded-lg overflow-hidden">
+                  <PriceComparisonChart
+                    similarSuburbPrices={predictionData.similarPrices}
+                  />
+                </div>
+              </CardContent>
+            </Card>
 
-            <div className="pt-4">
-              <Button
-                onClick={handleNewPrediction}
-                className="w-full sm:w-auto sm:min-w-[200px] mx-auto block"
-              >
-                Make Another Prediction
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+            {/* Trend Chart */}
+            <Card className="bg-white shadow-lg overflow-hidden">
+              <CardContent className="p-4 sm:p-6">
+                {selectedSuburb ? (
+                  <PriceTrendChart selectedSuburb={selectedSuburb}/>
+                ) : (
+                  <div className="h-[400px] flex items-center justify-center">
+                    <p className="text-gray-500">No suburb data available</p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Action Button */}
+          <div className="flex justify-center pt-4">
+            <Button
+              onClick={handleNewPrediction}
+              className="w-full sm:w-auto sm:min-w-[200px]"
+            >
+              Make Another Prediction
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

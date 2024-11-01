@@ -1,4 +1,4 @@
-//frontend/src/components/form/PricePredictorForm.tsx
+// PricePredictorForm.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -121,7 +121,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
         .filter(s => s.Suburb !== formData.Suburb)
         .sort((a, b) => a.distanceDiff - b.distanceDiff)
         .slice(0, 10);
-
+      
       const predictions = [
         formData,
         ...similarSuburbs.map(suburb => ({
@@ -155,10 +155,20 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
 
       const comparisonData = predictions.map((pred, index) => ({
         suburb: pred.Suburb,
+        bedrooms: parseInt(pred.Bedroom2),
+        bathrooms: parseInt(pred.Bathroom),
         price: results[index].predicted_price,
         isSelected: index === 0
       }));
 
+      const predictionResult = {
+        prediction: results[0].predicted_price,
+        similarPrices: comparisonData,
+        selectedSuburb: formData.Suburb
+      };
+
+      localStorage.setItem('predictionResult', JSON.stringify(predictionResult));
+      
       onPredictionComplete(results[0].predicted_price, comparisonData);
     } catch (err) {
       console.error(err);
