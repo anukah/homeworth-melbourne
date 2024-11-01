@@ -1,6 +1,8 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import suburbPrices from '@/data/suburb_prices.json';
 
 // Define types for the data structure
@@ -19,6 +21,12 @@ interface PriceTrendChartProps {
 }
 
 const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => {
+  // State for year range filter
+  const [yearRange, setYearRange] = useState<{ start: number; end: number }>({
+    start: 2000,
+    end: new Date().getFullYear(),
+  });
+
   // Early return if no suburb is selected
   if (!selectedSuburb) {
     return (
@@ -26,9 +34,9 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
         <CardHeader>
           <CardTitle>Price Trend</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="bg-white">
           <div className="h-[400px] flex items-center justify-center">
-            <p className="text-gray-500">Select a suburb to view price trends</p>
+            <p className="text-muted-foreground">Select a suburb to view price trends</p>
           </div>
         </CardContent>
       </Card>
@@ -43,15 +51,20 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
   // Transform the data for Recharts
   const chartData: ChartDataPoint[] = suburbData
     ? Object.entries(suburbData)
-        .filter(([key]) => key !== 'Suburb' && !isNaN(Number(key))) // Remove non-year keys
+        .filter(([key]) => key !== 'Suburb' && !isNaN(Number(key)))
         .map(([year, price]) => ({
           year,
           price: typeof price === 'string' ? Number(price) : price
         }))
-        .sort((a, b) => Number(a.year) - Number(b.year)) // Sort by year
+        .sort((a, b) => Number(a.year) - Number(b.year))
     : [];
 
-  // Format price for tooltip and axis
+  // Filter data by the selected year range
+  const filteredChartData = chartData.filter(
+    (data) => Number(data.year) >= yearRange.start && Number(data.year) <= yearRange.end
+  );
+
+  // Format price for tooltip
   const formatPrice = (value: number) => {
     return new Intl.NumberFormat('en-AU', {
       style: 'currency',
@@ -65,9 +78,9 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-4 border rounded shadow">
-          <p className="font-medium">{`Year: ${label}`}</p>
-          <p className="text-blue-600">
+        <div className="bg-white p-4 border rounded shadow-md">
+          <p className="font-semibold">{`Year: ${label}`}</p>
+          <p className="text-primary">
             {formatPrice(payload[0].value)}
           </p>
         </div>
@@ -83,9 +96,9 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
         <CardHeader>
           <CardTitle>Price Trend</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="bg-white">
           <div className="h-[400px] flex items-center justify-center">
-            <p className="text-gray-500">No price data available for {selectedSuburb}</p>
+            <p className="text-muted-foreground">No price data available for {selectedSuburb}</p>
           </div>
         </CardContent>
       </Card>
@@ -93,11 +106,11 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
   }
 
   // Calculate min and max values for better Y axis range
-  const minPrice = Math.min(...chartData.map(d => d.price));
-  const maxPrice = Math.max(...chartData.map(d => d.price));
+  const minPrice = Math.min(...filteredChartData.map(d => d.price));
+  const maxPrice = Math.max(...filteredChartData.map(d => d.price));
   const yAxisDomain = [
-    Math.floor(minPrice * 0.9), // Add 10% padding to the bottom
-    Math.ceil(maxPrice * 1.1)   // Add 10% padding to the top
+    Math.floor(minPrice * 0.9),
+    Math.ceil(maxPrice * 1.1)
   ];
 
   return (
@@ -105,48 +118,84 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
       <CardHeader>
         <CardTitle>Price Trend for {selectedSuburb}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="bg-white">
+        <div className="mb-4 flex justify-between">
+          <div className="flex items-center gap-4">
+            <label htmlFor="startYear">Start Year:</label>
+            <select
+              id="startYear"
+              value={yearRange.start}
+              onChange={(e) =>
+                setYearRange((prev) => ({ ...prev, start: Number(e.target.value) }))
+              }
+            >
+              {Array.from(new Set(chartData.map(data => data.year))).map(year => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="flex items-center gap-4">
+            <label htmlFor="endYear">End Year:</label>
+            <select
+              id="endYear"
+              value={yearRange.end}
+              onChange={(e) =>
+                setYearRange((prev) => ({ ...prev, end: Number(e.target.value) }))
+              }
+            >
+              {Array.from(new Set(chartData.map(data => data.year))).map(year => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
         <div className="h-[400px]">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart
-              data={chartData}
-              margin={{ top: 10, right: 30, left: 60, bottom: 30 }}
+            <AreaChart
+              data={filteredChartData}
+              margin={{ top: 10, right: 20, left: 20, bottom: 10 }}
             >
               <CartesianGrid strokeDasharray="3 3" className="stroke-gray-200" />
               <XAxis
                 dataKey="year"
-                tick={{ fill: '#666' }}
-                tickLine={{ stroke: '#666' }}
+                tick={{ fill: 'var(--muted-foreground)' }}
+                tickLine={false}
+                axisLine={false}
+                tickMargin={8}
                 label={{ 
                   value: 'Year', 
                   position: 'insideBottom', 
-                  offset: -20 
+                  offset: -10 
                 }}
               />
               <YAxis
                 domain={yAxisDomain}
-                tickFormatter={formatPrice}
-                tick={{ fill: '#666' }}
-                tickLine={{ stroke: '#666' }}
+                tick={{ display: 'none' }}
+                tickLine={false}
+                axisLine={false}
                 label={{ 
                   value: 'Median Price', 
                   angle: -90, 
                   position: 'insideLeft',
-                  offset: -50
+                  offset: -10
                 }}
               />
               <Tooltip content={<CustomTooltip />} />
-              <Line
+              <Area
                 type="monotone"
                 dataKey="price"
-                stroke="#2563eb"
+                stroke="hsl(124.48,55.37%,23.73%)"
+                fill="hsl(173 58% 39% /0.5)"
                 strokeWidth={2}
-                dot={{ fill: '#2563eb', strokeWidth: 2 }}
                 activeDot={{ r: 8 }}
-                animationDuration={1000}
+                animationDuration={800}
                 animationEasing="ease-in-out"
               />
-            </LineChart>
+            </AreaChart>
           </ResponsiveContainer>
         </div>
       </CardContent>
