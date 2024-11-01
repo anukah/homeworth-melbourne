@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import suburbPrices from '@/data/suburb_prices.json';
 
@@ -116,7 +116,8 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Price Trend for {selectedSuburb}</CardTitle>
+        <CardTitle>Price Trend</CardTitle>
+        <CardDescription className="text-zinc-500">Comparing the Median Price of a House in {selectedSuburb} over the past decade</CardDescription>
       </CardHeader>
       <CardContent className="bg-white">
         <div className="mb-4 flex justify-between">
