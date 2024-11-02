@@ -1,5 +1,5 @@
+//frontend/src/components/charts/PriceTrendChart.tsx
 "use client";
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -37,13 +37,10 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
         .sort((a, b) => Number(a.year) - Number(b.year))
     : [];
 
-  // Determine the initial year range, setting the end year to either the latest year in the data or the current year
+  // Set initial year range with end year fixed to 2023
   const [yearRange, setYearRange] = useState<{ start: number; end: number }>({
     start: 2000,
-    end: Math.max(
-      ...chartData.map((data) => Number(data.year)),
-      new Date().getFullYear()
-    ),
+    end: 2023
   });
 
   // Early return if no suburb is selected
@@ -112,7 +109,7 @@ const PriceTrendChart: React.FC<PriceTrendChartProps> = ({ selectedSuburb }) => 
     <Card>
       <CardHeader>
         <CardTitle>Price Trend</CardTitle>
-        <CardDescription className="text-zinc-500">Comparing the Median Price of a House in {selectedSuburb} over the past decade</CardDescription>
+        <CardDescription className="text-zinc-500">Comparing the Median Selling Price of a House in {selectedSuburb} over the past decade</CardDescription>
       </CardHeader>
       <CardContent className="bg-white">
         <div className="mb-4 flex justify-between">

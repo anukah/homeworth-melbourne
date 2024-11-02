@@ -47,8 +47,9 @@ const ResultsPage = () => {
   return (
     <main className="container mx-auto p-4 space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Prediction Results</h1>
-        <Button 
+        <h1 className="text-xl font-bold">Prediction Results</h1>
+        <Button
+          className=''
           variant="default" 
           onClick={() => router.push('/')}
         >
@@ -57,56 +58,36 @@ const ResultsPage = () => {
       </div>
 
       <Card>
-  <CardHeader>
-    <CardTitle>Prediction Results</CardTitle>
-  </CardHeader>
-  <CardContent className="p-4 sm:p-6">
-    <Alert className="bg-green-50 border-green-200">
-      <AlertTitle className="text-green-800 text-base sm:text-lg">
-        Estimated Price
-      </AlertTitle>
-      <AlertDescription className="text-2xl sm:text-2xl md:text-3xl font-bold text-green-900 mt-2">
-        {formatPrice(prediction)}
-      </AlertDescription>
-      <div className="mt-2 text-sm text-green-700">
-        For {formData.Suburb}, {formData.Bedroom2} bedrooms, {formData.Bathroom} bathrooms
-      </div>
-    </Alert>
-  </CardContent>
-</Card>
+        <CardContent className="p-4 sm:p-6">
+          <Alert className="bg-green-50 border-green-200">
+            <AlertTitle className="text-green-800 text-base sm:text-lg">
+              Estimated Price
+            </AlertTitle>
+            <AlertDescription className="text-2xl sm:text-2xl md:text-3xl font-bold text-green-900 mt-2">
+              {formatPrice(prediction)}
+            </AlertDescription>
+            <div className="mt-2 text-sm text-green-700">
+              For {formData.Suburb}, {formData.Bedroom2} bedrooms, {formData.Bathroom} bathrooms
+            </div>
+          </Alert>
+        </CardContent>
+      </Card>
 
       <div className="grid grid-cols-1 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Price Comparison</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <PriceComparisonChart similarSuburbPrices={similarPrices} />
-          </CardContent>
-        </Card>
+    
+        {/* Price Comparison Chart */}
+        <PriceComparisonChart similarSuburbPrices={similarPrices} />
         
-        <Card>
-          <CardHeader>
-            <CardTitle>Price Trends</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <PriceTrendChart selectedSuburb={formData.Suburb} />
-          </CardContent>
-        </Card>
+        {/* Trend Chart */}
+        <PriceTrendChart selectedSuburb={formData.Suburb} />
         
+        {/* Sale Method Comparison Chart */}
         {saleMethodPrices && (
-          <Card>
-            <CardHeader>
-              <CardTitle>Sale Method Comparison</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <SaleMethodComparisonChart
-                formData={formData}
-                currentMethod={formData.Method}
-                predictions={saleMethodPrices}
-              />
-            </CardContent>
-          </Card>
+            <SaleMethodComparisonChart
+            formData={formData}
+            currentMethod={formData.Method}
+            predictions={saleMethodPrices}
+            />
         )}
       </div>
     </main>

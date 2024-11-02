@@ -203,7 +203,8 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
   };
 
   return (
-    <Card className="bg-white shadow-lg">
+    <div className="min-h-screen w-full flex items-center justify-center">
+    <Card className="bg-white shadow-lg justify-center">
       <CardHeader className="space-y-1 pb-4 border-b">
         <CardTitle className="text-xl font-bold text-gray-900 text-center">Melbourne Housing Price Predictor</CardTitle>
         <CardDescription className='text-center'>Enter property details to get an estimated price</CardDescription>
@@ -407,6 +408,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
         )}
       </CardContent>
     </Card>
+    </div>
   );
 };
 
