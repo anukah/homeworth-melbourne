@@ -1,3 +1,4 @@
+//frontend/src/components/form/PricePredictorForm.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -35,7 +36,13 @@ interface PredictionResult {
 interface PredictorFormProps {
   onPredictionComplete: (
     prediction: number,
-    similarPrices: Array<{ suburb: string; price: number; isSelected: boolean }>
+    similarPrices: Array<{ suburb: string; price: number; isSelected: boolean }>,
+    saleMethodPrices: {
+      S: number;
+      A: number;
+      SP: number;
+    },
+    formData: FormData
   ) => void;
 }
 
@@ -109,8 +116,25 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
     e.preventDefault();
     setLoading(true);
     setError(null);
-
+  
     try {
+      // Make predictions for all sale methods
+      const methodPredictions = await Promise.all(['S', 'A', 'SP'].map(method => 
+        fetch('http://localhost:8000/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            ...formData,
+            Method: method
+          }),
+        }).then(res => res.json())
+      ));
+  
+      const saleMethodPrices = {
+        S: methodPredictions[0].predicted_price,
+        A: methodPredictions[1].predicted_price,
+        SP: methodPredictions[2].predicted_price
+      };
       const distance = parseFloat(formData.Distance);
       
       const similarSuburbs = suburbData
@@ -169,7 +193,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
 
       localStorage.setItem('predictionResult', JSON.stringify(predictionResult));
       
-      onPredictionComplete(results[0].predicted_price, comparisonData);
+      onPredictionComplete(results[0].predicted_price, comparisonData, saleMethodPrices, formData);
     } catch (err) {
       console.error(err);
       setError('Failed to get predictions. Please try again.');

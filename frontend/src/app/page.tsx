@@ -1,22 +1,33 @@
+// app/page.tsx
 "use client";
+
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import PredictorForm from '@/components/form/PricePredictorForm';
+import { usePrediction } from './PredictionContext';
 
 const PricePredictorPage = () => {
   const router = useRouter();
+  const { setPredictionData } = usePrediction();
 
-  const handlePrediction = (prediction: number, similarPrices: Array<{ suburb: string; price: number; isSelected: boolean; }>) => {
-    localStorage.setItem('predictionResult', JSON.stringify({
+  const handlePredictionComplete = (
+    prediction: number,
+    similarPrices: any[],
+    saleMethodPrices: { S: number; A: number; SP: number },
+    formData: any
+  ) => {
+    setPredictionData({
       prediction,
-      similarPrices
-    }));
+      similarPrices,
+      saleMethodPrices,
+      formData
+    });
     router.push('/results');
   };
 
   return (
-    <div className="flex justify-center items-center h-screen max-w-4xl mx-auto p-4">
-      <PredictorForm onPredictionComplete={handlePrediction} />
+    <div className="container mx-auto p-4">
+      <PredictorForm onPredictionComplete={handlePredictionComplete} />
     </div>
   );
 };
