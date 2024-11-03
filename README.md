@@ -14,7 +14,7 @@ A full-stack application designed to predict house prices in Melbourne based on 
 
 ### Result Page
 ![Result Page](./documentation-images/result.png)
-![Filters](./documentation-images/result-filter.png)
+![Filters](./documentation-images/charts.png)
 
 ## Project Structure
 
