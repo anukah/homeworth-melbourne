@@ -1,4 +1,4 @@
-//frontend/src/components/form/PricePredictorForm.tsx
+// Import necessary dependencies from React and UI components
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,6 +11,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils";
 import suburbData from '@/data/suburb_data.json';
 
+// Interface defining the structure of the form data
 interface FormData {
   Rooms: string;
   Distance: string;
@@ -29,10 +30,12 @@ interface FormData {
   Suburb: string;
 }
 
+// Interface for the prediction response from the API
 interface PredictionResult {
   predicted_price: number;
 }
 
+// Interface defining the props for the PredictorForm component
 interface PredictorFormProps {
   onPredictionComplete: (
     prediction: number,
@@ -46,7 +49,9 @@ interface PredictorFormProps {
   ) => void;
 }
 
+// Main PredictorForm component
 const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) => {
+  // Initialize form state with empty values
   const [formData, setFormData] = useState<FormData>({
     Rooms: '',
     Distance: '',
@@ -65,10 +70,12 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
     Suburb: ''
   });
 
+  // State for handling loading, errors, and suburb selector popup
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
 
+  // Effect to automatically calculate total rooms when bedrooms or bathrooms change
   useEffect(() => {
     const bedrooms = parseInt(formData.Bedroom2) || 0;
     const bathrooms = parseInt(formData.Bathroom) || 0;
@@ -80,6 +87,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
     }));
   }, [formData.Bedroom2, formData.Bathroom]);
 
+  // Handler for input field changes
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -88,17 +96,21 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
     }));
   };
 
+  // Handler for select field changes
   const handleSelectChange = (name: keyof FormData, value: string) => {
     setFormData(prev => ({
       ...prev,
       [name]: value,
+      // Reset landsize to 0 if property type is unit
       ...(name === 'Type' && value === 'u' ? { Landsize: '0' } : {})
     }));
   };
 
+  // Handler for suburb selection
   const handleSuburbChange = (value: string) => {
     const selectedSuburb = suburbData.find(s => s.Suburb === value);
     if (selectedSuburb) {
+      // Update form with selected suburb's data
       setFormData(prev => ({
         ...prev,
         Suburb: value,
@@ -112,13 +124,14 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
     setOpen(false);
   };
 
+  // Handler for form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
   
     try {
-      // Make predictions for all sale methods
+      // Get predictions for all sale methods (S: Private Sale, A: Auction, SP: Property Sale)
       const methodPredictions = await Promise.all(['S', 'A', 'SP'].map(method => 
         fetch('http://localhost:8000/predict', {
           method: 'POST',
@@ -130,13 +143,15 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
         }).then(res => res.json())
       ));
   
+      // Organize predictions by sale method
       const saleMethodPrices = {
         S: methodPredictions[0].predicted_price,
         A: methodPredictions[1].predicted_price,
         SP: methodPredictions[2].predicted_price
       };
+
+      // Find similar suburbs based on distance
       const distance = parseFloat(formData.Distance);
-      
       const similarSuburbs = suburbData
         .map(suburb => ({
           ...suburb,
@@ -146,6 +161,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
         .sort((a, b) => a.distanceDiff - b.distanceDiff)
         .slice(0, 10);
       
+      // Prepare prediction requests for selected suburb and similar suburbs
       const predictions = [
         formData,
         ...similarSuburbs.map(suburb => ({
@@ -159,6 +175,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
         }))
       ];
 
+      // Get predictions for all suburbs
       const responses = await Promise.all(
         predictions.map(predictionData =>
           fetch('http://localhost:8000/predict', {
@@ -177,6 +194,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
         responses.map(response => response.json() as Promise<PredictionResult>)
       );
 
+      // Format comparison data for visualization
       const comparisonData = predictions.map((pred, index) => ({
         suburb: pred.Suburb,
         bedrooms: parseInt(pred.Bedroom2),
@@ -185,14 +203,15 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
         isSelected: index === 0
       }));
 
+      // Save prediction result to localStorage
       const predictionResult = {
         prediction: results[0].predicted_price,
         similarPrices: comparisonData,
         selectedSuburb: formData.Suburb
       };
-
       localStorage.setItem('predictionResult', JSON.stringify(predictionResult));
       
+      // Call the callback with all prediction results
       onPredictionComplete(results[0].predicted_price, comparisonData, saleMethodPrices, formData);
     } catch (err) {
       console.error(err);
@@ -202,6 +221,7 @@ const PredictorForm: React.FC<PredictorFormProps> = ({ onPredictionComplete }) =
     }
   };
 
+  //render the form
   return (
     <div className="min-h-screen w-full flex items-center justify-center">
     <Card className="bg-white shadow-lg justify-center">

@@ -75,11 +75,6 @@ full_pipeline = Pipeline([
 print("Training model...")
 full_pipeline.fit(X_train, y_train)
 
-# Evaluate model
-y_pred = full_pipeline.predict(X_test)
-mse = mean_squared_error(y_test, y_pred)
-print(f"Mean Squared Error: {mse}")
-
 # Save model
 print("Saving model...")
 joblib.dump(full_pipeline, 'models/house_price_pipeline.joblib')
